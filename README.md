@@ -14,48 +14,25 @@ Before you begin, ensure you have:
 
 1. **Clone the repository**
 
+   1) Open CMD
    1) create [folder]	 
    2) cd [folder]
    3) git clone git@github.com:Charly1981/activities-solution.git
-   4) cd activities-solution\SpingBoot Services
+   4) cd activities-solution
 
-2. 
+2. Install microservices in following order in different CMD: 
 
-springboot-service-config-server Installation:
+	1) Execute and wait to finish: install-config-server.bat
+	2) Execute and wait to finish: install-eureka-server.bat
+	3) Execute and wait to finish: install-service-users.bat
+	4) Execute and wait to finish: install-service-oauth.bat
+	5) Execute and wait to finish: install-service-activities.bat
+	6) Execute and wait to finish: install-sservice-zuul-server.bat
+	
+3. Check Instalation
 
-2) cd springboot-service-config-server
-3) mvnw.cmd clean install
-4) java -jar target/springboot-service-config-server-0.0.1-SNAPSHOT.jar
-
-springboot-service-eureka-server Installation:
-
-1) cd ..\springboot-service-eureka-server
-3) mvnw.cmd clean install
-4) java -jar target/springboot-service-eureka-server-0.0.1-SNAPSHOT.jar
-
-springboot-service-oauth Installation:
-
-2) cd ..\springboot-service-oauth
-3) mvnw.cmd clean install
-4) java -jar target/springboot-service-oauth-0.0.1-SNAPSHOT.jar
-
-springboot-service-users Installation:
-
-1) cd ..\springboot-service-users
-3) mvnw.cmd clean install
-4) java -jar target/springboot-service-users-0.0.1-SNAPSHOT.jar
-
-springboot-service-activities Installation:
-
-1) cd ..\springboot-service-activities
-3) mvnw.cmd clean install
-4) java -jar target/springboot-service-activities-0.0.1-SNAPSHOT.jar
-
-springboot-service-zuul-server Installation:
-
-1) cd ..\springboot-service-zuul-server
-3) mvnw.cmd clean install
-4) java -jar target/springboot-service-zuul-server-0.0.1-SNAPSHOT.jar
+	1) open browser
+	2) go to http://localhost:8090/activity-management/swagger-ui/#/
 
 
 
