@@ -35,4 +35,10 @@ Before you begin, ensure you have:
 	2) go to http://localhost:8090/activity-management/swagger-ui/#/
 
 
+4. Check Documentation 
 
+	1) go to [folder]\activities-solution\Solution Documentation
+
+5. Postman Collection
+
+	1) got to [folder]\activities-solution\Postman Collection
