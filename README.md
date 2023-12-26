@@ -22,12 +22,12 @@ Before you begin, ensure you have:
 
 2. Install microservices in following order in different CMD: 
 
-	1) Execute and wait to finish: install-config-server.bat
-	2) Execute and wait to finish: install-eureka-server.bat
-	3) Execute and wait to finish: install-service-users.bat
-	4) Execute and wait to finish: install-service-oauth.bat
-	5) Execute and wait to finish: install-service-activities.bat
-	6) Execute and wait to finish: install-sservice-zuul-server.bat
+	1) Execute and wait to finish: install1-config-server.bat
+	2) Execute and wait to finish: install2-eureka-server.bat
+	3) Execute and wait to finish: install3-service-users.bat
+	4) Execute and wait to finish: install4-service-oauth.bat
+	5) Execute and wait to finish: install5-service-activities.bat
+	6) Execute and wait to finish: install6-service-zuul-server.bat
 	
 3. Check Instalation
 
