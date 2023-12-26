@@ -17,6 +17,7 @@ Before you begin, ensure you have:
    1) create [folder]	 
    2) cd [folder]
    3) git clone https://github.com/your-username/spring-microservice.git
+   4) cd activities-solution
 
 
 
