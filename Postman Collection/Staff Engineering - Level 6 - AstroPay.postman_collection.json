@@ -1,0 +1,321 @@
+{
+	"info": {
+		"_postman_id": "11c5b391-91a2-4771-8592-0f0ec112fbaf",
+		"name": "Staff Engineering - Level 6 | AstroPay",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "713469"
+	},
+	"item": [
+		{
+			"name": "localhost:8090/api/security/v1/oauth/token",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "frontendapp",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "12345",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "password",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8090/api/security/v1/oauth/token",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"security",
+						"v1",
+						"oauth",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8090/api/activity-management/v1/activities",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiJhZG1pbiIsInNjb3BlIjpbInJlYWQiLCJ3cml0ZSJdLCJleHAiOjE3MDM2MTQ0MjYsInVzZXJJZCI6MjIyMjIyLCJhdXRob3JpdGllcyI6WyJST0xFX0FETUlOIiwiUk9MRV9VU0VSIl0sImp0aSI6ImIyOThhMGY3LWIxN2UtNDgyNy1hNjVlLTZhMjU0Yjk2ZjQ1MyIsImNsaWVudF9pZCI6ImZyb250ZW5kYXBwIn0.HLK3RhSZ9IF06GWXRw_5c5ng0_qQ7efXUe91lR9UH78",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8090/api/activity-management/v1/activities?sortBy=id&sortDirection=DESC",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"activity-management",
+						"v1",
+						"activities"
+					],
+					"query": [
+						{
+							"key": "sortBy",
+							"value": "id"
+						},
+						{
+							"key": "sortDirection",
+							"value": "DESC"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8090/api/activity-management/v1/{userId}/activities",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiJhZG1pbiIsInNjb3BlIjpbInJlYWQiLCJ3cml0ZSJdLCJleHAiOjE3MDM2MTQ0MjYsInVzZXJJZCI6MjIyMjIyLCJhdXRob3JpdGllcyI6WyJST0xFX0FETUlOIiwiUk9MRV9VU0VSIl0sImp0aSI6ImIyOThhMGY3LWIxN2UtNDgyNy1hNjVlLTZhMjU0Yjk2ZjQ1MyIsImNsaWVudF9pZCI6ImZyb250ZW5kYXBwIn0.HLK3RhSZ9IF06GWXRw_5c5ng0_qQ7efXUe91lR9UH78",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8090/api/activity-management/v1/113411/activities?activityType=PAYMENT",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"activity-management",
+						"v1",
+						"113411",
+						"activities"
+					],
+					"query": [
+						{
+							"key": "activityType",
+							"value": "PAYMENT"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8090/api/activity-management/v1/{userId}/activities/{activityId}",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiJhZG1pbiIsInNjb3BlIjpbInJlYWQiLCJ3cml0ZSJdLCJleHAiOjE3MDM2MTQ0MjYsInVzZXJJZCI6MjIyMjIyLCJhdXRob3JpdGllcyI6WyJST0xFX0FETUlOIiwiUk9MRV9VU0VSIl0sImp0aSI6ImIyOThhMGY3LWIxN2UtNDgyNy1hNjVlLTZhMjU0Yjk2ZjQ1MyIsImNsaWVudF9pZCI6ImZyb250ZW5kYXBwIn0.HLK3RhSZ9IF06GWXRw_5c5ng0_qQ7efXUe91lR9UH78",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8090/api/activity-management/v1/113411/activities/8c051307aadd416d8e7e094971e395c1",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"activity-management",
+						"v1",
+						"113411",
+						"activities",
+						"8c051307aadd416d8e7e094971e395c1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8090/api/activity-management/v1/activities/add",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiJhZG1pbiIsInNjb3BlIjpbInJlYWQiLCJ3cml0ZSJdLCJleHAiOjE3MDM2MTQ0MjYsInVzZXJJZCI6MjIyMjIyLCJhdXRob3JpdGllcyI6WyJST0xFX0FETUlOIiwiUk9MRV9VU0VSIl0sImp0aSI6ImIyOThhMGY3LWIxN2UtNDgyNy1hNjVlLTZhMjU0Yjk2ZjQ1MyIsImNsaWVudF9pZCI6ImZyb250ZW5kYXBwIn0.HLK3RhSZ9IF06GWXRw_5c5ng0_qQ7efXUe91lR9UH78",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{            \r\n            \"userId\": 113411,\r\n            \"activityId\": \"8c051207aadd416d8e7e094971e445c0\",\r\n            \"activityType\": \"PAYMENT\",\r\n            \"dataJson\": \"{\\\"payment_id\\\": \\\"8c051207aadd416d8e7e094971e445c0\\\", \\\"card_id\\\": 12341234, \\\"user_id\\\": 113411, \\\"payment_amount\\\": 10, \\\"payment_currency\\\": \\\"EUR\\\", \\\"status\\\": \\\"COMPLETED\\\", \\\"created_at\\\": \\\"2023-12-14 13:37:31\\\", \\\"merchant_name\\\": \\\"TFL*LONDON\\\", \\\"merchant_id\\\": 12309, \\\"mcc_code\\\": 7399}\",\r\n            \"createAt\": \"2010-12-24\"\r\n        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8090/api/activity-management/v1/activities/add",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"activity-management",
+						"v1",
+						"activities",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8090/api/activity-management/v1/activities/delete/{userId}",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiJhZG1pbiIsInNjb3BlIjpbInJlYWQiLCJ3cml0ZSJdLCJleHAiOjE3MDM2MTQ0MjYsInVzZXJJZCI6MjIyMjIyLCJhdXRob3JpdGllcyI6WyJST0xFX0FETUlOIiwiUk9MRV9VU0VSIl0sImp0aSI6ImIyOThhMGY3LWIxN2UtNDgyNy1hNjVlLTZhMjU0Yjk2ZjQ1MyIsImNsaWVudF9pZCI6ImZyb250ZW5kYXBwIn0.HLK3RhSZ9IF06GWXRw_5c5ng0_qQ7efXUe91lR9UH78",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8090/api/activity-management/v1/activities/delete/15",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"activity-management",
+						"v1",
+						"activities",
+						"delete",
+						"15"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8090/api/activity-management/v1/actuator/health",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/activity-management/actuator/health",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"activity-management",
+						"actuator",
+						"health"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8090/api/v1/users/usuarios",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8090/api/users/v1/usuarios",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"users",
+						"v1",
+						"usuarios"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
