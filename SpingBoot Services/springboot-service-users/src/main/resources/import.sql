@@ -1,5 +1,5 @@
-INSERT INTO `usuarios` (user_id, username, password, enabled, nombre, apellido, email) VALUES (113411, 'user','$2a$10$Yc7.KOyG0mTaS.T2DjL0..Wk0Tn0xHPsbOCrkogYssYdvTqAzQXX2',1, 'Andres', 'Guzman','profesor@bolsadeideas.com');
-INSERT INTO `usuarios` (user_id, username, password, enabled, nombre, apellido, email) VALUES (222222, 'admin','$2a$10$Yc7.KOyG0mTaS.T2DjL0..Wk0Tn0xHPsbOCrkogYssYdvTqAzQXX2',1, 'John', 'Doe','jhon.doe@bolsadeideas.com');
+INSERT INTO `usuarios` (user_id, username, password, enabled, nombre, apellido, email) VALUES (113411, 'user','$2a$10$Yc7.KOyG0mTaS.T2DjL0..Wk0Tn0xHPsbOCrkogYssYdvTqAzQXX2',1, 'Martin', 'Lopez','martin.lopez@astropay.com');
+INSERT INTO `usuarios` (user_id, username, password, enabled, nombre, apellido, email) VALUES (222222, 'admin','$2a$10$Yc7.KOyG0mTaS.T2DjL0..Wk0Tn0xHPsbOCrkogYssYdvTqAzQXX2',1, 'John', 'Doe','jhon.doe@astropay.com');
 
 INSERT INTO `roles` (nombre) VALUES ('ROLE_USER');
 INSERT INTO `roles` (nombre) VALUES ('ROLE_ADMIN');
