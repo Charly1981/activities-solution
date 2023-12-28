@@ -17,7 +17,7 @@ Before you begin, ensure you have:
    1) Open CMD
    1) create [folder]	 
    2) cd [folder]
-   3) git clone git@github.com:Charly1981/activities-solution.git
+   3) git clone http://github.com/Charly1981/activities-solution.git
    4) cd activities-solution
 
 2. **Install microservices in following order in different CMD:** 
